@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-hello-pod
+  labels:
+    app: node_hello
+spec:
+  containers:
+  - name: hello-app2
+    image: hello-app2
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 8080
